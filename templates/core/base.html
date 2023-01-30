@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'core/base.css' %}">
+    {% block individualcss %}{% endblock individualcss %}
+    <title>{% block title %}{% endblock title %}</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="{% url 'home' %}" class="wave-btn {% block homeactive %}{% endblock %}">Home</a> 
+            <a href="{% url 'skills' %}" class="wave-btn {% block skillsactive %}{% endblock %}">Skills</a> 
+            <a href="{% url 'experience' %}" class="wave-btn {% block experienceactive %}{% endblock %}">Experience</a> 
+            <a href="{% url 'education' %}" class="wave-btn {% block educationactive %}{% endblock %}">Education</a> 
+            <a href="{% url 'about' %}" class="wave-btn {% block aboutactive %}{% endblock %}">About</a> 
+            <a href="{% url 'contact' %}" class="wave-btn {% block contactactive %}{% endblock %}">Contact</a> 
+        </nav>
+        <h2 class="header-small-text">Rahdin Hussain</h2>
+    </header>
+    <main>
+        {% block main %}{% endblock main %}
+    </main>
+    <footer>
+            <nav>
+                <a href="{% url 'home' %}" class="">Home</a> 
+                <a href="{% url 'skills' %}" class="">Skills</a> 
+                <a href="{% url 'experience' %}" class="">Experience</a> 
+                <a href="{% url 'education' %}" class="">Education</a> 
+                <a href="{% url 'about' %}" class="">About</a> 
+                <a href="{% url 'contact' %}" class="">Contact</a> 
+            </nav>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/rahdin-hussain-b83b24151/" target="_blank">Linkedin</a>
+            <a href="https://github.com/Rahdi-H" target="_blank">Github</a>
+        </div>
+        <div class="copyright">
+            &#169; Copyright 2022-2023, Rahdin Hussain
+        </div>
+    </footer>
+    {% block script %}{% endblock %}
+</body>
+</html>

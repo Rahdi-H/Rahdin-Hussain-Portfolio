@@ -1,0 +1,29 @@
+.main-section{
+    display: flex;
+    width: 75%;
+}
+.inner-child{
+    padding: 15px;
+    margin: 0 20px;
+    box-shadow: 1px 1px 5px rgb(157, 226, 255);
+}
+.text{
+    padding: 10px 0;
+}
+
+.inner-child:hover{
+    box-shadow: 1px 1px 15px rgb(0, 183, 255);
+}
+
+@media screen and (max-width:720px) {
+    .main-section{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+    }
+    .inner-child{
+        margin: 20px 0;
+        border-radius: 25px;
+        text-align: center;
+    }
+}

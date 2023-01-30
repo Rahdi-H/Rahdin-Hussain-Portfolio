@@ -1,0 +1,21 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block individualcss %}
+<link rel="stylesheet" href="{% static 'education/css/education.css' %}">
+{% endblock individualcss %}
+{% block title %} Education {% endblock title %}
+{% block educationactive %}active{% endblock %}
+{% block main %}
+    <section class="main-section">
+        <div class="inner-child">
+            <h1 class="text">Diploma in EEE</h1>
+            <h2 class="text">Airman Training Institute</h2>
+            <h3 class="text">I have successfully completed diploma in EEE from Bangladesh Air Force Airman Training Institute.</h3>
+        </div>
+        <div class="inner-child">
+            <h1 class="text">Self Taught Programmer</h1>
+            <h2 class="text">W3SCHOOL | FREECODECAMP</h2>
+            <h3 class="text">From the love of software i learned all the skills on my own from various sources.</h3>
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,45 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block individualcss %}
+<link rel="stylesheet" href="{% static 'skills/css/skills.css' %}">
+{% endblock individualcss %}
+{% block title %} Skills {% endblock title %}
+{% block skillsactive %}active{% endblock %}
+{% block main %}
+    <section class="skills-main-section">
+        <div class="skills-main-child">
+            <h2>LANGUAGES</h2>
+            <div class="items">
+                <h3>PYTHON</h3>
+                <h3>JAVASCRIPT</h3>
+                <h3>HTML5</h3>
+                <h3>CSS3</h3>
+            </div>
+        </div>
+        <div class="skills-main-child">
+            <h2>FRAMEWORKS</h2>
+            <div class="items">
+                <h3>DJANGO</h3>
+                <h3>BOOTSTRAP</h3>
+                <h3>TAILWINDCSS</h3>
+            </div>
+        </div>
+        <div class="skills-main-child">
+            <h2>DATABASES</h2>
+            <div class="items">
+                <h3>MYSQL</h3>
+                <h3>MONGODB</h3>
+                <h3>SQLITE3</h3>
+                <h3>POSTGRESQL</h3>
+            </div>
+        </div>
+    </section>
+    <section class="skills-demostration">
+        <h2>Demostration of my skills</h2>
+        <div class="skills">
+            <a href="{% url 'django' %}">DJANGO</a>
+            <a href="{% url 'bootstrap' %}">BOOTSTRAP</a>
+            <a href="{% url 'tailwindcss' %}">TAILWINDCSS</a>
+        </div>
+    </section>
+{% endblock %}

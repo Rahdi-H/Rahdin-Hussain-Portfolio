@@ -1,0 +1,22 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block individualcss %}
+<link rel="stylesheet" href="{% static 'about/css/about.css' %}">
+{% endblock individualcss %}
+{% block title %} about {% endblock title %}
+{% block aboutactive %}active{% endblock %}
+{% block main %}
+    <section class="main-section">
+        <div class="inner-child">
+            <h4>Name: Rahdin Hussain</h4>
+            <h4>Date of Birth: 16 Aug 2001</h4>
+            <h4>District: Sylhet</h4>
+            <h4>Country: Bangladesh</h4>
+            <h4>Skills: <a href="{% url 'skills' %}">skills page</a></h4>
+        </div>
+        <div class="inner-child">
+            <h1>About Myself</h1>
+            <h4>As a self-taught programmer, I possess a strong skill set in the programming languages of Python and Django. My dedication and passion for coding have allowed me to gain a thorough understanding of these technologies and apply them effectively in various projects. I am constantly seeking opportunities to expand my knowledge and expertise in the field, and am dedicated to delivering high-quality, efficient and innovative solutions.</h4>
+        </div>
+    </section>
+{% endblock %}

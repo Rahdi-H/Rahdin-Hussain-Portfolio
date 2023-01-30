@@ -1,0 +1,27 @@
+.main-section{
+    display: flex;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 1px 1px 10px rgb(66, 164, 255);
+    width: 50%;
+}
+.inner-child{
+    padding: 0 10px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+@media screen and (max-width:720px) {
+    .main-section{
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+       margin: 25px 0;
+    }
+    .inner-child{
+        width: 100%;
+        padding: 15px 10px;
+    }
+}

@@ -1,0 +1,19 @@
+.main-section{
+    display: flex;
+}
+.inner-child{
+    display: flex;
+    flex-direction: column;
+    padding: 80px;
+    box-shadow: 1px 1px 10px rgb(142, 223, 255);
+    border-radius: 15px;
+}
+.inner-child:hover{
+    box-shadow: 1;
+    box-shadow: 1px 1px 20px rgb(82, 206, 255);
+}
+@media screen and (max-width:720px) {
+    .main-section{
+        margin: 25px 0;
+    }
+}

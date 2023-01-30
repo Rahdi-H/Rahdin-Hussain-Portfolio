@@ -1,0 +1,53 @@
+/* css styles for home */
+.home-main{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.home-child{
+    padding: 5px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+h1{
+    font-size: 2.5em;
+}
+.child-img{
+    display: flex;
+    align-items: center;
+}
+.home-child > a {
+    margin: 10px 0;
+    text-decoration: none;
+    padding: 10px 20px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    font-weight: 600;
+    border-radius: 5px;
+}
+.home-child > a:hover{
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    transition: 0.2s ease;
+}
+.home-child > img {
+    height: auto;
+    width: 75%;
+}
+@media screen and (max-width: 720px) {
+    .home-main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    h1, h2{
+        text-align: center;
+    }
+    .home-child{
+        margin-top: 50px;
+        justify-content: center;
+        align-items: center;
+    }
+}

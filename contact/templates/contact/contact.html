@@ -1,0 +1,18 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block individualcss %}
+<link rel="stylesheet" href="{% static 'contact/css/contact.css' %}">
+{% endblock individualcss %}
+{% block title %} Contact {% endblock title %}
+{% block contactactive %}active{% endblock %}
+{% block main %}
+    <section class="main-section">
+        <div class="inner-child">
+            <h1>Contact Informatin</h1>
+            <h3>rhrahdi@gmail.com</h3>
+            <h3>rahdinhussain@gmail.com</h3>
+            <h3><a href="https://www.linkedin.com/in/rahdin-hussain-b83b24151/" target="_blank">LinkedIn</a></h3>
+            <h3><a href="https://github.com/Rahdi-H" target="_blank">Github</a></h3>
+        </div>
+    </section>
+{% endblock %}

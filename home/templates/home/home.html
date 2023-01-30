@@ -1,0 +1,19 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block individualcss %}
+<link rel="stylesheet" href="{% static 'home/css/home.css' %}">
+{% endblock individualcss %}
+{% block title %} Home {% endblock title %}
+{% block homeactive %}active{% endblock %}
+{% block main %}
+    <section class="home-main">
+        <div class="home-child">
+            <h1>Passionate Programmer <br>love to code and solve problem</h1>
+            <h2>Python | Django | HTML5 | CSS3</h2>
+            <a href="{% static 'home/pdf/rahdiresume.pdf' %}" target="_blank">MY RESUME</a>
+        </div>
+        <div class="home-child child-img">
+            <img src="{% static 'home/images/rahdi.png' %}" alt="">
+        </div>
+    </section>
+{% endblock main %}

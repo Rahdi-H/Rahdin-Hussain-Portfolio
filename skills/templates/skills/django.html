@@ -1,0 +1,68 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block individualcss %}
+<!-- <link rel="stylesheet" href="{% static 'skills/css/skills.css' %}"> -->
+<link rel="stylesheet" href="{% static 'skills/css/bootstrap.min.css' %}">
+{% endblock individualcss %}
+{% block title %} Django {% endblock title %}
+{% block skillsactive %}active{% endblock %}
+{% block main %}
+    <div class="container">
+        <h2 class="text-center alert alert-info">Django CRUD operation</h2>
+        <div class="row">
+            <div class="col-4">
+                <h2 class="text-center alert alert-info">Add data to database</h2>
+                {% if messages %}
+                {% for message in messages %}
+                <div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+                    <strong>{{message}}</strong>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                {% endfor %}
+                {% endif %}
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    {{form.as_p}}
+                    <button type="submit" class="btn btn-success">ADD</button>
+                </form>
+            </div>
+            <div class="col-8">
+                <h2 class="text-center alert alert-info">Database Records</h2>
+                {% if all_person %}
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Password</th>
+                        <th scope="col">Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        {% for person in all_person %}
+                        <tr>
+                            <th scope="row">{{person.id}}</th>
+                            <td>{{person.name}}</td>
+                            <td>{{person.email}}</td>
+                            <td>{{person.password}}</td>
+                            <td>
+                                <a href="{% url 'update' person.id %}" class="btn btn-warning btn-sm">Edit</a>
+                                <a href="{% url 'delete' person.id %}" class="btn btn-danger btn-sm">Delete</a>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                  </table>
+                {% else %}
+                <h3 class="alert alert-warning">No data in database</h3>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block script %}
+<script src="{% static 'skills/js/jquery.js' %}"></script>
+<script src="{% static 'skills/js/popper.js' %}"></script>
+<script src="{% static 'skills/js/bootstrap.min.js' %}"></script>
+{% endblock %}

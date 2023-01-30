@@ -1,0 +1,21 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block individualcss %}
+<link rel="stylesheet" href="{% static 'exp/css/exp.css' %}">
+{% endblock individualcss %}
+{% block title %} Experience {% endblock title %}
+{% block experienceactive %}active{% endblock %}
+{% block main %}
+    <section class="main-section">
+        <div class="inner-child">
+            <h1 class="text">Technical Professional</h1>
+            <h2 class="text">Bangladesh Air Force</h2>
+            <h3 class="text">I have served Bangladesh Air Force for almost 5 years as a technical professional.</h3>
+        </div>
+        <div class="inner-child">
+            <h1 class="text">Python | Django</h1>
+            <h2 class="text">Self Emlployed</h2>
+            <h3 class="text">From the love of software i learned all the skills on my own from various sources and building projects.</h3>
+        </div>
+    </section>
+{% endblock %}
